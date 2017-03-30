@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, ul, li, h1, h2, h3, h4, h5, h6, fieldset, legend {
+	padding:0;
+	margin:0;
+}
+ul, li {
+	list-style-type:none;
+	text-transform:capitalize;
+}
+.clear {
+	clear:both;
+*display:inline;/*IE only*/
+}
+/*menu*/
+#menu {
+	margin:0 auto 0px;
+	width:1100px;
+	display:block;
+}
+
+#menu .mainlevel {
+	background:#e9eaee;
+	float:left;
+	font-family: Arial;
+	font-size: 14px;
+	line-height: 40px;
+	text-transform:uppercase;
+	text-align:center;
+	color:#444;
+	border-right:0px solid #fff;
+	width:220px;/*IE6 only*/
+}
+#menu .mainlevel a {
+	color:#444;
+	text-decoration:none;
+	line-height:40px;
+	display:block;
+	text-align:center;
+	width:220px;
+}
+#menu .mainlevel a:hover {
+	color:#f78c40;
+	text-decoration:none;
+	background-color:#e5e5e5;
+}
+#menu .mainlevel ul {
+	display:none;
+	position:absolute;
+	z-index:100;
+}
+#menu .mainlevel li {
+	border-top:0px solid #fff;
+	background:#f78c40;
+	width:220px;/*IE6 only*/
+}
+
+#menu .mainlevel li a {
+	color:#444;
+	text-decoration:none;
+	line-height:40px;
+	display:block;
+	text-align:center;
+	width:220px;
+	background-color:#e9eaee;
+}
+#menu .mainlevel li a:hover {
+	color:#ffffff;
+	text-decoration:none;
+	background-color:#f78c40;
+}
+

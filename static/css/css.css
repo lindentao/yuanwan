@@ -1,0 +1,147 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*CSS Digg style pagination*/
+
+DIV.digg {
+	PADDING-RIGHT: 3px;
+	PADDING-LEFT: 3px;
+	PADDING-BOTTOM: 3px;
+	MARGIN: 3px;
+	PADDING-TOP: 3px;
+	TEXT-ALIGN: center
+}
+DIV.digg A {
+	BORDER-RIGHT: #e6e6e6 1px solid;
+	PADDING-RIGHT: 5px;
+	BORDER-TOP: #e6e6e6 1px solid;
+	PADDING-LEFT: 5px;
+	PADDING-BOTTOM: 2px;
+	MARGIN: 2px;
+	BORDER-LEFT: #e6e6e6 1px solid;
+	COLOR: #777777;
+	PADDING-TOP: 2px;
+	BORDER-BOTTOM: #e6e6e6 1px solid;
+	TEXT-DECORATION: none
+}
+DIV.digg A:hover {
+	BORDER-RIGHT: #777777 1px solid;
+	BORDER-TOP: #777777 1px solid;
+	BORDER-LEFT: #777777 1px solid;
+	COLOR: #000;
+	BORDER-BOTTOM: #777777 1px solid
+}
+DIV.digg A:active {
+	BORDER-RIGHT: #777777 1px solid;
+	BORDER-TOP: #777777 1px solid;
+	BORDER-LEFT: #777777 1px solid;
+	COLOR: #000;
+	BORDER-BOTTOM: #777777 1px solid
+}
+DIV.digg SPAN.current {
+	BORDER-RIGHT: #777777 1px solid;
+	PADDING-RIGHT: 5px;
+	BORDER-TOP: #777777 1px solid;
+	PADDING-LEFT: 5px;
+	FONT-WEIGHT: bold;
+	PADDING-BOTTOM: 2px;
+	MARGIN: 2px;
+	BORDER-LEFT: #777777 1px solid;
+	COLOR: #fff;
+	PADDING-TOP: 2px;
+	BORDER-BOTTOM: #777777 1px solid;
+	BACKGROUND-COLOR: #777777
+}
+DIV.digg SPAN.disabled {
+	BORDER-RIGHT: #eee 1px solid;
+	PADDING-RIGHT: 5px;
+	BORDER-TOP: #eee 1px solid;
+	PADDING-LEFT: 5px;
+	PADDING-BOTTOM: 2px;
+	MARGIN: 2px;
+	BORDER-LEFT: #eee 1px solid;
+	COLOR: #ddd;
+	PADDING-TOP: 2px;
+	BORDER-BOTTOM: #eee 1px solid
+}
+.help-cont-1 ul li {
+    float: left;
+    margin: 0 5px 10px;
+    overflow: hidden;
+    width: 200px;
+}
+.help-cont-1 ul li h3 {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.help-cont-2 ul li {
+    float: left;
+    margin: 0 25px 10px;
+}
+.help-cont-2 ul li h3 {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+
+.pagebar {
+    clear: both;
+    margin-top: 20px;
+    padding: 10px 50px 10px 0;
+    text-align: right;
+}
+.pagebar .aaa {
+    border: 1px solid #ccc;
+    color: #666;
+    display: inline-block;
+    font-size: 12px;
+    height: 23px;
+    line-height: 23px;
+    margin-left: 6px;
+    text-align: center;
+    vertical-align: middle;
+    width: 70px;
+}
+.pagebar .aaa:hover, .pagebar a.page_now {
+    background: #dcdcdc none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    color: #fff;
+    text-decoration: none;
+}
+.pagebar .aaa.prev {
+    background: #f8f8f8 none repeat scroll 0 0;
+    color: #666;
+    padding: 0 10px;
+    width: 40px;
+}
+.pagebar .aaa.next {
+    background: #f8f8f8 none repeat scroll 0 0;
+    color: #666;
+    padding: 0 10px;
+    width: 40px;
+}
+.pagebar span {
+    color: #959595;
+    font-size: 12px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+.pagebar span .page-txt {
+    border: 1px solid #ccc;
+    height: 22px;
+    line-height: 22px;
+    margin: 0 2px;
+    text-align: center;
+    width: 36px;
+}
+.pagebar span .page-btn {
+    background: #f9f9f9 none repeat scroll 0 0;
+}
+.paginator { font: 12px Arial, Helvetica, sans-serif;padding:5px 10px 5px 0; margin: 0px;}
+.paginator a {padding: 1px 6px; border: solid 1px #ddd; background: #fff; text-decoration: none;margin-right:2px}
+.paginator a:visited {padding: 1px 6px; border: solid 1px #ddd; background: #fff; text-decoration: none;}
+.paginator .cpb {padding: 1px 6px;font-weight: bold; font-size: 12px;border:none}
+.paginator a:hover {color: #fff; background: #E97A06;border-color:#E97A06;text-decoration: none;}
+

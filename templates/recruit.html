@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content %}
+<!--show pic-->
+<div class="show_pic">
+    <div class="pic">
+        <div class="banner_img">
+            <img src="{{ static_url('images/banner_content.png') }}">
+        </div>
+    </div>
+</div>
+<!--show pic end-->
+<div class="com_main">
+    <div class="com_pre">
+        <div class="main_page">
+            <div class="view_text">
+                <img src="{{ static_url('images/ledgement.png') }}"><span>&nbsp&nbsp招贤纳士&nbsp&nbsp</span><img src="{{ static_url('images/ledgement.png') }}">
+            </div>
+            <div class="content">
+                <div class="tt">
+                    <table>
+                        <tr>
+                            <td width="30%;">职位名称</td>
+                            <td width="24%;">职位类别</td>
+                            <td width="25%;">工作地点</td>
+                            <td>更新日期</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="joblist">
+                    <table>
+                        {% for job in jobs %}
+                        <tr>
+                            <td width="30%;"><a href="/job/{{job.id}}">{{ job.name }}</td>
+                            <td width="26%;">{{ job.type }}</td>
+                            <td width="23%;">{{ job.address }}</td>
+                            <td>{{ job.time.strftime('%Y-%m-%d') }}</td>
+                        </tr>
+                        {% end %}
+                    </table>
+                </div>
+
+            </div>
+            <div class="pages">
+                <div class="home_page">
+                    <p>首页</p>
+                </div>
+                <div class="next_page">
+                    <p>上一页</p>
+                </div>
+                <div class="page">
+                    <p>1</p>
+                </div>
+                <div class="next_page">
+                    <p>下一页</p>
+                </div>
+                <div class="home_page">
+                    <p>首页</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% end %}
+
+
+

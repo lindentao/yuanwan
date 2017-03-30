@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+{% block sub-title %}
+interior wooden door for high market
+{% end %}
+
+{% block css %}
+<style type="text/css">
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+</style>
+<!--project-->
+<link href="{{ static_url('css/zi.css') }}" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="{{ static_url('css/style.css') }}">
+<link rel="stylesheet" href="{{ static_url('css/css.css') }}">
+<link rel="stylesheet" href="{{ static_url('css/menu.css') }}">
+<link rel="stylesheet" href="{{ static_url('css/chinaz.css') }}">
+<link rel="stylesheet" href="{{ static_url('css/leftlrtk.css') }}">
+{% end %}
+
+{% block js %}
+<script src="{{ static_url('js/chinaz.js') }}" type="text/javascript"></script>
+<script src="{{ static_url('js/jquery-latest.min.js') }}"></script>
+<script src="{{ static_url('js/jquery-1.8.2.min.js') }}"></script>
+<script src="{{ static_url('js/lrtk.js') }}"></script>
+{% end %}
+
+{% block content %}
+
+<table width="1100" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+        <td height="30">&nbsp;</td>
+    </tr>
+</table>
+
+<table width="1100" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+        <td width="586"><img src="{{ static_url('images/201604131907065446.jpg') }}" width="600" height="300" /></td>
+        <td width="514" valign="top">
+            <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td height="150" valign="top" ><span style="font-size:18px;color:#FF9900;"><strong>One Stop Home Improvement</strong></span><br />
+                        <br />
+                        <span style="font-size:16px;">Free design</span><br />
+                        <span style="font-size:16px;">Free on-site guidance</span><br />
+                        <span style="font-size:16px;">Make everything easy</span></td>
+                </tr>
+                <tr>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td><img src="{{ static_url('images/201604131756304343.jpg') }}" width="200" height="150" /></td>
+                            <td><img src="{{ static_url('images/201604131756328562.jpg') }}" width="200" height="150" /></td>
+                        </tr>
+                    </table>
+                    </td>
+                </tr>
+            </table></td>
+    </tr>
+</table>
+
+
+<table width="1100" border="0" align="center" cellpadding="0" cellspacing="0">
+
+    <tr>
+        <td><!-- 代码 开始 -->
+            <div class="head-warp">
+                <div class="head">
+                    <div class="nav-box">
+                        <ul>
+                            <li class="cur">Products--Slabs</li>
+                        </ul>
+                        <div class="nav-line" style = "left: 92px; width: 64px;" ></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main">
+                <div class="help clearfix">
+                    <div class="help-side">
+                        <dl>
+                            <dt>Style</a></dt>
+
+                            <dd ><a href="european/">European style</a></dd>
+
+                            <dd ><a href="Door-46-105-1.html">Modern style</a></dd>
+
+                            <dd ><a href="Door-47-105-1.html">Classical style</a></dd>
+
+                        </dl>
+
+                        <dl>
+                            <dt><a href="Door-106-100-1.html">Material</a></dt>
+
+                            <dd ><a href="Door-49-106-1.html">Real wood</a></dd>
+
+                            <dd ><a href="Door-50-106-1.html">Composite board</a></dd>
+
+                        </dl>
+
+                        <dl>
+                            <dt><a href="Door-107-100-1.html">Surface</a></dt>
+
+                            <dd ><a href="Door-51-107-1.html">Painting</a></dd>
+
+                            <dd ><a href="Door-52-107-1.html">PVC films</a></dd>
+
+                            <dd ><a href="Door-53-107-1.html">PP films</a></dd>
+
+                        </dl>
+
+                        <dl>
+                            <dt><a href="Door-108-100-1.html">Hardware</a></dt>
+
+                            <dd ><a href="Door-55-108-1.html">Hardware</a></dd>
+
+                        </dl>
+
+
+                        <div class="side-slider" style="top: 148px; "></div>
+                        <div class="nav-line" style="left: 92px; width: 64px; "></div>
+                    </div>
+                    <div class="help-cont help-cont-1">
+                        <ul>
+                            {% for product in objs %}
+                            <li><a href="Products_show-5879-42-1.html" title={{ product.name }} target="_blank"><img src={{ product.pic[0].path }} width="200" height="200" ></a>
+                                <div class="portfolio-carousel-details">
+                                    <h3>
+                                        <a href="Products_show-5879-42-1.html" title={{ product.name }} target="_blank">{{ product.name[0:18]+'...' }}</a>
+                                    </h3>
+                                </div>
+                            </li>
+                            {% end %}
+
+                        </ul>
+                        <div class="clear"></div>
+                        <div class="pagebar">
+
+                            <!-- AspNetPager V6.0.0 for VS2005  Copyright:2003-2006 Webdiyer (www.webdiyer.com) -->
+                            <div id="AspNetPager1" class="paginator" LayoutType="Table" style="text-align:center;white-space:nowrap;">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td class="paginator" valign="bottom" align="center" nowrap="true" style="width:20%;">
+                                            Total <font color='red'><b>{{ page['total'] }}</b></font> Count，Total {{ page['page_count'] }}  Page
+                                        </td>
+                                        <td valign="bottom" align="center" nowrap="true" class="paginator" style="width:80%;">
+                                            <a class="paginator" href="/slabs/?page=1" style="margin-right:5px;">HomePage</a>
+                                            <a class="paginator" href="/slabs/?page={{ page['page_prev'] }}" style="margin-right:5px;">PrevPage</a>
+                                            <span class="cpb" style="margin-right:5px;">{{ page['page_current'] }}</span>
+                                            <a class="paginator" href="/slabs/?page={{ page['page_next'] }}" style="margin-right:5px;">NextPage</a>
+                                            <a class="paginator" href="/slabs/?page={{ page['page_count'] }}" style="margin-right:5px;">LastPage</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!-- AspNetPager V6.0.0 for VS2005 End -->
+
+
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 代码 结束 --></td>
+
+        {% end %}
+
+
+

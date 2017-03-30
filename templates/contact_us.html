@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block css %}
+<style type="text/css">
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+</style>
+<!--project-->
+<link rel="stylesheet" href="{{ static_url('css/zi.css') }}">
+<link rel="stylesheet" href="{{ static_url('css/style.css') }}">
+<link rel="stylesheet" href="{{ static_url('css/css.css') }}">
+<link rel="stylesheet" href="{{ static_url('css/menu.css') }}">
+<link rel="stylesheet" href="{{ static_url('css/chinaz.css') }}">
+<link rel="stylesheet" href="{{ static_url('css/responsive.css') }}">
+{% end %}
+{% block js %}
+<script src="{{ static_url('js/chinaz.js') }}" type="text/javascript"></script>
+<script src="{{ static_url('js/jquery-latest.min.js') }}"></script>
+{% end %}
+{% block content %}
+<table width="1100" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+        <td style="padding-top:30px; padding-bottom:50px;"><table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td><div class="centered-wrapper">
+                    <div class="one-fourth">
+                        <aside>
+                            <h6>ADDRESS:</h6>
+                            <p>Unit 502I, ,<br />
+                                Building NO. 19-2, Wanghai Rd,<br />
+                                Siming District,<br />
+                                Xiamen, China 361008<br />
+                                <a href="/">www.championbm.com</a><br />
+                            </p>
+                            <div class="contact-info">
+                                <h6>CONTACT INFO:</h6>
+                                <p><span>24 hours Service:</span><br />+86 15960213595</p>
+                                <p><span>Tel/Fax:</span>+86 0792-5802368</p>
+                                <p><span>Email:</span> <a href="mailto:info@championbm.com">info@championbm.com</a> </p>
+                            </div>
+                        </aside>
+                        <!--end aside-->
+                    </div>
+                    <!--end one-fourth-->
+
+                    <div class="three-fourth column-last">
+                        <h6>CONTACT US:</h6>
+                        <div id="contactform">
+                            <div id="message"></div>
+                            <fieldset class="percent-one-third">
+                                <input name="name" type="text" id="name" value="NAME *" class="input" onkeydown="if(event.keyCode==13){searchs();} " onblur="if (this.value==&#39;&#39;){ this.value=&#39;NAME *&#39;;}" onfocus="if (this.value==&#39;NAME *&#39;) {this.value=&#39;&#39;;}" />
+                            </fieldset>
+                            <fieldset class="percent-one-third">
+                                <input name="phone" type="text" id="phone" value="PHONE *" class="input" onkeydown="if(event.keyCode==13){searchs();} " onblur="if (this.value==&#39;&#39;){ this.value=&#39;PHONE *&#39;;}" onfocus="if (this.value==&#39;PHONE *&#39;) {this.value=&#39;&#39;;}" />
+                            </fieldset>
+                            <fieldset class="percent-one-third ">
+                                <input name="email" type="text" id="email" value="E-MAIL *" class="input" onkeydown="if(event.keyCode==13){searchs();} " onblur="if (this.value==&#39;&#39;){ this.value=&#39;E-MAIL *&#39;;}" onfocus="if (this.value==&#39;E-MAIL *&#39;) {this.value=&#39;&#39;;}" />
+                            </fieldset>
+                            <fieldset class="percent-one-third">
+                                <select name="ddlIam" id="ddlIam">
+                                    <option value="I AM : A Bulider">I AM : A Bulider</option>
+                                    <option value="I AM: A Retailer">I AM: A Retailer</option>
+                                    <option value="I AM: A Wholesaler">I AM: A Wholesaler</option>
+                                    <option value="I AM: A Trading Company">I AM: A Trading Company</option>
+                                    <option value="OTHERS">OTHERS</option>
+
+                                </select>
+                            </fieldset>
+                            <fieldset class="clear">
+                                <textarea name="content" id="content" cols="58" rows="10" tabindex="4" class="inputa2" onfocus="if(this.value==&#39;MESSAGE *&#39;){this.value=&#39;&#39;}" onblur="if(this.value==&#39;&#39;){this.value=&#39;MESSAGE *&#39;}">MESSAGE *</textarea>
+                            </fieldset>
+                            <fieldset class="maot10">
+                                <input type="submit" name="Button1" value="Send Message" id="Button1" class="button  red" />
+                            </fieldset>
+                            <div class="space"></div>
+                        </div>
+                        <!--end contactform-->
+                    </div>
+                    <!--three-fourth-->
+
+                    <div class="clear"></div>
+                </div>
+
+                </td>
+            </tr>
+        </table></td>
+    </tr>
+</table>
+<!-- Google Code for &#36716;&#21270;&#36319;&#36394; Conversion Page -->
+{% end %}
+
+
+

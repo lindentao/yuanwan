@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, ul, li, h1, h2, h3, h4, h5, h6, fieldset, legend {
+	padding:0;
+	margin:0;
+}
+img {
+	border: 0;
+}
+body {
+	FONT-SIZE: 14px;
+	COLOR: #444;
+	LINE-HEIGHT: 30px;
+	TEXT-DECORATION: none;
+	font-family: Arial;
+}
+
+.zi {
+	FONT-SIZE: 14px;
+	COLOR: #444;
+	LINE-HEIGHT: 30px;
+	TEXT-DECORATION: none;
+	font-family: Arial;
+}
+.dh {
+	FONT-SIZE: 14px;
+	COLOR: #444;
+	LINE-HEIGHT: 30px;
+	TEXT-DECORATION: none;
+	text-transform:uppercase;
+	font-weight: bold;
+	font-family: Arial;
+}
+.zi2 {
+	FONT-SIZE: 14px;
+	COLOR: #444;
+	LINE-HEIGHT: 30px;
+	TEXT-DECORATION: none;
+	font-family: Arial;
+}
+.xw {
+	FONT-SIZE: 18px;
+	COLOR: #444;
+	text-transform:uppercase;
+	LINE-HEIGHT: 30px;
+	TEXT-DECORATION: none;
+	font-family: Arial;
+}
+.xw2 {
+	FONT-SIZE: 24px;
+	COLOR: #333333;
+	LINE-HEIGHT: 40px;
+	TEXT-DECORATION: none;
+	font-family: Arial;
+}
+.chu {
+	FONT-SIZE: 18px;
+	COLOR: #444;
+	LINE-HEIGHT: 30px;
+	TEXT-DECORATION: none;
+	font-family: Arial;
+}
+
+
+.chu2 {
+	FONT-SIZE: 36px;
+	COLOR: #444;
+	LINE-HEIGHT: 44px;
+	TEXT-DECORATION: none;
+	font-family: Arial;
+}
+
+.foot {
+	FONT-SIZE: 14px;
+	COLOR: #ffffff;
+	LINE-HEIGHT: 30px;
+	TEXT-DECORATION: none;
+	font-family: Arial;
+}
+.foot2 {
+	FONT-SIZE: 14px;
+	COLOR: #969595;
+	LINE-HEIGHT: 30px;
+	TEXT-DECORATION: none;
+	font-family: Arial;
+}
+
+
+A:link {
+	COLOR: #444;
+	TEXT-DECORATION: none;
+}
+A:visited {
+	COLOR: #444;
+	TEXT-DECORATION: none;
+}
+A:hover {
+	COLOR: #f78c40;
+	TEXT-DECORATION: none;
+}
+A:active {
+	COLOR: #f78c40;
+	TEXT-DECORATION: none;
+}
+
+.gray:link, .gray:active, .gray:visited {
+	COLOR: #969595;
+	TEXT-DECORATION: none;
+}
+.gray:hover {
+	COLOR: #ffffff;
+	TEXT-DECORATION: none;
+}
+
+.gray2:link, .gray2:active, .gray2:visited {
+	COLOR: #ffffff;
+	TEXT-DECORATION: none;
+}
+.gray2:hover {
+	COLOR: #ffffff;
+	TEXT-DECORATION: none;
+}
+
+
+
+
+
