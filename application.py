@@ -2,9 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import os
-import tornado.web
 
-import url
+from url import *
 
 settings = dict(
     debug=True,
@@ -13,6 +12,6 @@ settings = dict(
     )
 
 application = tornado.web.Application(
-    handlers=url,
+    handlers=admin_url + frontend_url,
     **settings
     )

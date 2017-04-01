@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content %}
+<!--show pic-->
+<div class="show_pic">
+    <div class="pic">
+        <div class="banner_img">
+            <img src="{{ static_url('images/banner_content.png') }}">
+        </div>
+    </div>
+</div>
+<!--show pic end-->
+<div class="com_main">
+    <div class="com_pre">
+        <div class="main_page">
+            <div class="view_text">
+                <img src="{{ static_url('images/ledgement.png') }}"><span>&nbsp&nbsp产品中心&nbsp&nbsp</span><img src="{{ static_url('images/ledgement.png') }}">
+            </div>
+            <div class="view_nav" id="tab">
+                <ul>
+                    <li id="id0" onclick="showTab(0)">
+                        <div class="view_nav_top">功能手机</div>
+                    </li>
+                    <li id="id1" onclick="showTab(1)">
+                        <div class="view_nav_top">穿戴产品</div>
+                    </li>
+                </ul>
+            </div>
+            <div id="tab0" style="display:block">
+                <div class="view_com_text">
+                    <div class="com_pro">COMPANY&nbsp;PROFILE</div>
+                    <div class="view_com_intr">公司简介</div>
+                    <p class="view_com_xi">深圳市睿博智联科技有限公司是一家以提供移动通讯、智能穿戴和物联网产品解决方案为主的服务商,
+                        专业为客户提供解决产品的设计开发、供应链管理、生产制造为一体的高新技术企业。
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;拥有MTK(联发科)平台的License许可协议，在香港、深圳、广州有销售
+                        公司、生产基地、研发中心，研发团队致力于2G\3G以及4G的移动设备的研发和设计，核心技术团队人员均有十二年以上的从
+                        业经验。 主要研发设计的产品有2G\3G\4G移动终端、智能穿戴、移动支付、智能家居、智能硬件，以及服务运营系统的移动
+                        设备服务提供商，服务过的主要品牌和客户有海尔、飞利浦、现代、鼎瑄、爱牵挂等。</p>
+                </div>
+                <div class="view_com_pic">
+                    <img src="{{ static_url('images/intro.png') }}">
+                </div>
+            </div>
+            <div class="view_tab" id="tab1">
+                <div class="view_com_text1">
+                    <div class="com_pro">COMPANY&nbsp;CULTURE</div>
+                    <div class="view_com_intr">企业文化</div>
+                    <div class="view_word">
+                        <p class="view_com_big">我们的做事标准</p>
+                        <p class="view_com_small">做对每一件小事,细节决定成败</p>
+                        <p class="view_com_big">我们的口号</p>
+                        <p class="view_com_small">没有优秀的个人,只有优秀的团队</p>
+                        <p class="view_com_big">我们的价值观</p>
+                        <p class="view_com_small">健康、快乐、真诚、务实、勤奋</p>
+                    </div>
+                </div>
+                <div class="view_com_pic1">
+                    <img src="{{ static_url('images/culture.png') }}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% end %}
+
+
+

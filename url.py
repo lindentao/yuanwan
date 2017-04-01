@@ -1,9 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from handlers.frontend.index import *
+from handlers.index import *
+from handlers.admin import *
 
-url = [
+admin_url = [
+    (r'/admin/', IndexHandler),
+    (r'/admin/category', CategoryHandler),
+]
+
+frontend_url = [
     (r'/', IndexHandler),
     (r'/about_us/', AboutUsHandler),
     (r'/international_projects/', InternationalProjectsHandler),
@@ -11,3 +17,4 @@ url = [
     (r'/slabs/', SlabsHandler),
     (r'.*', PageNotFoundHandler),
 ]
+

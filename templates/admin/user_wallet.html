@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block page_header %}
+渠道商加款
+{% end %}
+
+{% block page_content %}
+<div class="box-body">
+    <div class="row">
+        <div class="col-md-4">
+            <!-- Horizontal Form -->
+            <div class="box box-info">
+                <div class="box-header with-border">
+                </div>
+                <!-- /.box-header -->
+                <!-- form start -->
+                <form class="form-horizontal">
+                    <div class="box-body">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">渠道</label>
+                            <div class="col-sm-10">
+                                <select class="form-control select2" style="width: 100%;">
+                                    <!--<option selected="selected">{{ agent_infos[0]['agent_name'] }}</option>-->
+                                    {% for i in range(len(agent_infos)) %}
+                                    <option>{{agent_infos[i]['agent_name']}}</option>
+                                    {% end %}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">金额</label>
+
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="0.00元">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">类型</label>
+                            <div class="col-sm-10">
+                                <select class="form-control">
+                                    <option>加款</option>
+                                    <option>扣款</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">备注</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-info pull-right">确认</button>
+                    </div>
+                    <!-- /.box-footer -->
+                </form>
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.box-body -->
+
+
+{% end %}

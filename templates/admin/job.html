@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+<!--show pic-->
+<div class="show_pic">
+    <div class="pic">
+        <div class="banner_img">
+            <img src="{{ static_url('images/banner_content.png') }}">
+        </div>
+    </div>
+</div>
+<!--show pic end-->
+<div class="com_main">
+    <div class="com_pre">
+        <div class="main_page">
+            <div class="view_text">
+                <img src="{{ static_url('images/ledgement.png') }}"><span>&nbsp&nbsp招贤纳士&nbsp&nbsp</span><img src="{{ static_url('images/ledgement.png') }}">
+            </div>
+            <div class="recruit_pic">
+                <img src="{{ static_url('images/recruit.png') }}">
+            </div>
+            <div class="recruit_word">
+                <div class="recruit_word_head">
+                    <div class="recruit_word_title">
+                        <p>{{ job.name }}</p>
+                    </div>
+                    <div class="recruit_word_uptime">
+                        <p>更新时间：{{ job.time.strftime('%Y-%m-%d') }}</p>
+                    </div>
+                </div>
+                <div class="recruit_pic_job">
+                    <div class="recruit_pic_red">
+                        <img src="{{ static_url('images/recruit_pic_red.png') }}">
+                    </div>
+                    <div class="recruit_word_desc">
+                        <p>职位描述:</p>
+                    </div>
+                </div>
+                <div class="recruit_word_info">
+                    {% raw job.info.replace("\n","<br>") %}
+                </div>
+                <div class="recruit_pic_job">
+                    <div class="recruit_pic_red">
+                        <img src="{{ static_url('images/recruit_pic_red.png') }}">
+                    </div>
+                    <div class="recruit_word_desc">
+                        <p>任职要求:</p>
+                    </div>
+                </div>
+                <div class="recruit_word_info">
+                    {% raw job.require.replace("\n","<br>") %}
+                    <!--{{ job.require.replace("\n","<br>") }}-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% end %}
+
+
+
