@@ -4,7 +4,7 @@
 import os
 import tornado.web
 
-from url import url
+import url
 
 settings = dict(
     debug=True,

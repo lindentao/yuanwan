@@ -1,59 +1,80 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from mongoengine import *
 from datetime import datetime
 
-from settings import *
+from sqlalchemy import *
+from sqlalchemy.orm import *
+from sqlalchemy.ext.declarative import declarative_base
 
-connect(db_name, host=db_host)
+# 初始化数据库连接，数据库类型+数据库驱动名称://用户名:口令@机器地址:端口号/数据库名
+engine = create_engine("mysql+pymysql://root:123456@localhost:13306/test_sql", encoding='utf-8', echo=False)
 
-class Category(Document):
-    cid = StringField(primary_key=True, required=True, unique=True, max_length=8, verbose_name=u'分类ID')
-    name = StringField(required=True, max_length=24, verbose_name=u'分类名称')
-    type = StringField(required=True, max_length=8, verbose_name=u'分类类别')
+# 创建对象的基类:
+Base = declarative_base()
 
-    @property
-    def products(self):
-        '''| products | 产品列表 | List: [Product](#products) |  |  | |  |  |'''
 
-        return Product.objects(category=self.pk)
+class Article(Base):
+    # 表的名字:
+    __tablename__ = 't_article_info'
 
-materialChoice = (
-    ('Real', u'Real wood'),
-    ('Composite', u'Composite board'),
-    )
+    # 表的结构:
+    id = Column(Integer, primary_key=True)
+    name = Column(String(32), nullable=False, default='', unique=True)
+    body = Column(Text, nullable=False)
+    status = Column(SmallInteger, nullable=False, default=0)
+    ctime = Column(DateTime, nullable=False, default=datetime.now())
+    mtime = Column(DateTime, nullable=False, default=datetime.now())
 
-stylelChoice = (
-    ('European', u'European style '),
-    ('Modern', u'Modern style'),
-    ('Classical', u'Classical style'),
-    )
 
-class ProductPic(EmbeddedDocument):
-    '''产品图片'''
-    created_at = DateTimeField(required=True, default=datetime.now, verbose_name=u'创建时间')
-    name = StringField(default=u'', max_length=32, verbose_name=u'名字')
-    path = StringField(required=True, max_length=128, verbose_name=u'路径')
+class Category(Base):
+    __tablename__ = 't_category_info'
 
-class Product(Document):
-    category = ReferenceField(Category, required=True, verbose_name=u'类别', reverse_delete_rule=DENY)
-    name = StringField(required=True, max_length=64, verbose_name=u'产品名称')
-    material = StringField(max_length=16, choices=materialChoice, verbose_name=u'材料种类')
-    pic = ListField(EmbeddedDocumentField(ProductPic), required=False, default=[], verbose_name=u'图片列表')
-    style = StringField(max_length=16, choices=stylelChoice, verbose_name=u'风格种类')
-    updated_at = DateTimeField(required=True, default=datetime.now, verbose_name=u'更新时间')
+    id = Column(Integer, primary_key=True)
+    name = Column(String(32), nullable=False, default='', unique=True)
+    ctime = Column(DateTime, nullable=False, default=datetime.now())
+    goods = relationship('Goods')
+
+    def __init__(self, name):
+        self.name = name
+
+    def __repr__(self):
+        return "<User(name='%s', ctime='%s')>" % (self.name, self.ctime)
+
+
+class Goods(Base):
+    __tablename__ = 't_goods_info'
+
+    id = Column(Integer, primary_key=True)
+    category_id = Column(Integer, ForeignKey('t_category_info.id'), nullable=False)
+    name = Column(String(32), nullable=False, default='', unique=True)
+    origin = Column(String(32), default='')
+    color = Column(String(32), default='')
+    material = Column(String(32), default='')
+    size = Column(String(32), default='')
+    ctime = Column(DateTime, nullable=False, default=datetime.now())
+    mtime = Column(DateTime, nullable=False, default=datetime.now())
+
+    def __repr__(self):
+        return "<Goods(name='%s', category_id='%s')>" % (self.name, self.category_id)
+
+
+class GoodsImage(Base):
+    __tablename__ = 't_goods_image'
+
+    id = Column(Integer, primary_key=True)
+    goods_id = Column(Integer, ForeignKey('t_goods_info.id'), nullable=False)
+    image_id = Column(Integer, ForeignKey('t_image_info.id'), nullable=False)
+
+
+class Image(Base):
+    __tablename__ = 't_image_info'
+    id = Column(Integer, primary_key=True)
+    name = Column(String(32), nullable=False, default='')
+    path = Column(String(64), nullable=False, default='')
 
 
 if __name__ == "__main__":
     '''仅供测试models代码'''
-    # category1 = Category(cid='11', name='Entrance door', type='1')
-    # category1.save()
-    count = 0
-    while (count<12):
-        ppic1 = ProductPic(path='/static/images/201610221527244555.jpg')
-        ppic2 = ProductPic(path='/static/images/201610221527383035.jpg')
-        prod = Product(category='1', name=' Latest Design Wooden Door Interior Door Room Door', material='Real', style='European')
-        prod.pic = [ppic1, ppic2]
-        prod.save()
-        count = count + 1
+    # 创建表，如果表存在则忽视
+    Base.metadata.create_all(engine)
