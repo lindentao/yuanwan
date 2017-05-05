@@ -51,3 +51,13 @@ class PageNotFoundHandler(BaseHandler):
         self.render('error.html')
 
 
+frontend_url = [
+    (r'/', IndexHandler),
+    (r'/about_us/', AboutUsHandler),
+    (r'/international_projects/', InternationalProjectsHandler),
+    (r'/contact_us/', ContactUsHandler),
+    (r'/slabs/', SlabsHandler),
+    (r'.*', PageNotFoundHandler),
+]
+
+

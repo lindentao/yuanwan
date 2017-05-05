@@ -3,7 +3,8 @@
 
 import os
 
-from url import *
+from handlers.admin import *
+from handlers.index import *
 
 settings = dict(
     debug=True,

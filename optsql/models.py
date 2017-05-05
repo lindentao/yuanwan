@@ -8,7 +8,8 @@ from sqlalchemy.orm import *
 from sqlalchemy.ext.declarative import declarative_base
 
 # 初始化数据库连接，数据库类型+数据库驱动名称://用户名:口令@机器地址:端口号/数据库名
-engine = create_engine("mysql+pymysql://root:123456@localhost:13306/test_sql", encoding='utf-8', echo=False)
+# engine = create_engine("mysql+pymysql://root:123456@localhost:13306/test_sql", encoding='utf-8', echo=False)
+engine = create_engine("mysql+pymysql://root:qazwsxplm@14.215.135.16:13306/test_sql", encoding='utf-8', echo=False)
 # 创建对象的基类:
 Base = declarative_base()
 
